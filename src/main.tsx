@@ -1,11 +1,12 @@
+import React from "react";
 import ReactDOM from "react-dom/client";
-import {  HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import { CssBaseline } from "@mui/material";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-    <HashRouter>
-      <CssBaseline />
+  <React.StrictMode>
+    <BrowserRouter basename="/sign_signup_validation">
       <App />
-    </HashRouter>
+    </BrowserRouter>
+  </React.StrictMode>
 );
