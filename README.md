@@ -1,4 +1,4 @@
-🚀 Auth UI with React, Vite & Zustand
+🚀 UI with React, Vite & Zustand
 
 This project is a simple authentication UI built with React, Vite, Material-UI (MUI), and Zustand for state management.
 It includes fully responsive Sign Up and Login pages with form validation.
