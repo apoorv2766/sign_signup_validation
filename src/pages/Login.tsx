@@ -3,6 +3,7 @@ import { Box, Button, TextField, Typography, IconButton, InputAdornment } from "
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import { useAuthForms } from "../store/useAuthForms"; // ✅ use this instead of useAuthStore
+import { Link } from "react-router-dom";
 
 const Login: React.FC = () => {
   const { loginUsername, loginPassword, setField, errors, validateLogin } = useAuthForms();
@@ -112,9 +113,10 @@ const Login: React.FC = () => {
         {/* Sign up link */}
         <Typography variant="body2" sx={{ mt: 2, textAlign: "center" }}>
           Don’t have Account?{" "}
-          <a href="/signup" style={{   textDecoration: "underline",fontWeight: "bold" }}>
+         <Link
+          to="/signup" style={{ textDecoration: "underline", fontWeight: "bold" }}>
             SignUp
-          </a>
+          </Link>
         </Typography>
       </Box>
     </Box>
