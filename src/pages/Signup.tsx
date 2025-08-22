@@ -32,21 +32,29 @@ const navigate = useNavigate();
   } = useAuthForms();
 
 
+  // const handleSubmit = () => {
+  //   const valid = validateSignup();
+  //   if (!valid) return;
+
+  //   console.log("success:", {
+  //     name,
+  //     username,
+  //     email,
+  //     phone,
+  //     password,
+  //     confirmPassword,
+  //   });
+
+  //   resetSignup();
+  // };
+
   const handleSubmit = () => {
-    const valid = validateSignup();
-    if (!valid) return;
-
-    console.log("success:", {
-      name,
-      username,
-      email,
-      phone,
-      password,
-      confirmPassword,
-    });
-
+  if (validateSignup()) {
+    alert("Account Created Successfully!");
     resetSignup();
-  };
+    navigate("/login");
+  }
+};
 
   return (
     <Box className={styles.container}>
@@ -210,13 +218,7 @@ const navigate = useNavigate();
           <Box className={styles.buttonRow}>
             <Button
               variant="contained"
-              onClick={() => {
-                if (validateSignup()) {
-                  alert("Account Created Successfully!");
-                  resetSignup();
-                   navigate("/login");
-                }
-              }}
+              onClick={handleSubmit}
               sx={{
                 backgroundColor: "#00695c",
                 borderRadius: 2,
