@@ -1,0 +1,37 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #00695c;
+  padding: 20px 0;
+  height: 12vh;
+  text-align: center;
+  color: white;
+}
+
+.formWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.formBox {
+  width: 60%;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 20px;
+  gap: 16px;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3rem;
+  margin-right: 55px;
+}
